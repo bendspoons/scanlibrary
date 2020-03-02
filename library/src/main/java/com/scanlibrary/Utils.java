@@ -8,6 +8,7 @@ import android.provider.MediaStore;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import android.util.Log;
 
 /**
  * Created by jhansi on 05/04/15.
@@ -27,6 +28,8 @@ public class Utils {
         values.put(MediaStore.Images.Media.DESCRIPTION,"From Camera");
         //Uri path = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,values);
         Uri path = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null);
+
+        Log.d("TAG", "getUri: "+path);
 
         return path;
 
