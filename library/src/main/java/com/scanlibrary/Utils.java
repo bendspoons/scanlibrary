@@ -5,10 +5,10 @@ import android.content.ContentValues;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.os.Build;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import android.util.Log;
 
 /**
  * Created by jhansi on 05/04/15.
@@ -23,13 +23,17 @@ public class Utils {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
+        private Uri collection;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+          collection = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL);
+        } else {
+          collection = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        }
+
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.TITLE,"Title");
         values.put(MediaStore.Images.Media.DESCRIPTION,"From Camera");
-        //Uri path = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,values);
-        Uri path = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null);
-
-        Log.d("TAG", "getUri: "+path);
+        Uri path = context.getContentResolver().insert(collection, values);
 
         return path;
 
