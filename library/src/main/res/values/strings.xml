@@ -3,14 +3,14 @@
     <string name="app_name">ScanLibrary</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Einstellungen</string>
-    <string name="scanning">Scanne...</string>
-    <string name="done">Speichern</string>
-    <string name="scan">Weiter</string>
+    <string name="scanning">Bearbeite den gewählten Bereich...</string>
+    <string name="done">Belegscan jetzt übernehmen</string>
+    <string name="scan">Auswahlbereich gewählt? Hier klicken!</string>
     <string name="cantCrop">Das Bild kann nicht beschnitten werden. Bitte die Eckpunkte anpassen!</string>
     <string name="ok">OK</string>
     <string name="loading">Lade...</string>
-    <string name="applying_filter">Filter wird angewandt</string>
-    <string name="low_memory">Wenig RAM verfügbar</string>
-    <string name="low_memory_message">Ihre Smartphone verfügt über relativ wenig freiem Arbeitsspeicher. Die weitere Bearbeitung kann ggf. etwas zeit in Anspruch nehmen.</string>
+    <string name="applying_filter">Der gewählte Filter wird angewandt</string>
+    <string name="low_memory">Achtung: Wenig RAM</string>
+    <string name="low_memory_message">Ihre Smartphone verfügt über relativ wenig freiem Arbeitsspeicher. Die weitere Bearbeitung kann ggf. etwas Zeit in Anspruch nehmen.</string>
 
 </resources>
