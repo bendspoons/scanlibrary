@@ -25,7 +25,8 @@
             android:name="com.scanlibrary.CustomFileProvider"
             android:authorities="${applicationId}.com.scanlibrary.provider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true"
+            android:requestLegacyExternalStorage="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
