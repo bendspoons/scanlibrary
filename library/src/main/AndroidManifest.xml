@@ -14,7 +14,8 @@
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:label="@string/app_name"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true">
         <activity android:name=".ScanActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/scan_label">
@@ -24,8 +25,7 @@
             android:name="com.scanlibrary.CustomFileProvider"
             android:authorities="${applicationId}.com.scanlibrary.provider"
             android:exported="false"
-            android:grantUriPermissions="true"
-            android:requestLegacyExternalStorage="true">
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
